@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "597951177482",
+    "project_id": "orbboard-ab2ec",
+    "storage_bucket": "orbboard-ab2ec.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:597951177482:android:65d0cebb95611d95dcd0f3",
+        "android_client_info": {
+          "package_name": "com.orbboard.boardoar"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB7JFd6Y788rjyD5pRBpZKi5znRZJJ8CIw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

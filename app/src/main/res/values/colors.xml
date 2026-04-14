@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background_dark">#1B1235</color>
+    <color name="neon_blue">#3ED2FF</color>
+    <color name="neon_purple">#7A5CFF</color>
+    <color name="black">#FF000000</color>
+    <color name="orb_board_white">#FAF7F7</color>
+</resources>

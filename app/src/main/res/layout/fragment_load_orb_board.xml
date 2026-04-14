@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/black"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/orbBoardBackground"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/orb_board_portain_back" />
+
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/orbBoardLoadingGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="orbBoardProgress, orbBoardProgressText" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/orbBoardStateGroup"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        app:constraint_referenced_ids="orbBoardConnectionState" />
+
+    <TextView
+        android:id="@+id/orbBoardProgressText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="41dp"
+        android:layout_marginEnd="29dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/inter_bold"
+        android:gravity="center"
+        android:text="Loading..."
+        android:textColor="@color/orb_board_white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/orbBoardProgress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/orbBoardProgress"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:indeterminateTint="@color/orb_board_white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.8" />
+
+
+    <ImageView
+        android:id="@+id/orbBoardConnectionState"
+        android:layout_width="0dp"
+        android:layout_height="268dp"
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="31dp"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.43"
+        app:srcCompat="@drawable/orb_board_state" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/orbBoardNotiGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="orbBoardNotifText,orbBoardGrandButton,orbBoardSkipButton,orbBoardNotifText2,orbBoardNotiBack" />
+
+    <ImageView
+        android:id="@+id/orbBoardNotiBack"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="@+id/orbBoardBackground"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/orb_board_portain" />
+    
+
+    <TextView
+        android:id="@+id/orbBoardNotifText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="21dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginBottom="6dp"
+        android:fontFamily="@font/inter_bold"
+        android:gravity="center"
+        android:shadowColor="@color/black"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="5"
+        android:text="Allow notifications about bonuses and promos"
+        android:textColor="@color/orb_board_white"
+        android:textSize="31sp"
+        app:layout_constraintBottom_toTopOf="@+id/orbBoardNotifText2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:lineHeight="35dp" />
+
+    <Button
+        android:id="@+id/orbBoardGrandButton"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="33dp"
+        android:layout_marginEnd="33dp"
+        android:layout_marginBottom="7dp"
+        android:background="@drawable/orb_board_btn"
+        android:fontFamily="@font/inter_bold"
+        android:text="Yes, I Want Bonuses!"
+        android:textColor="@color/orb_board_white"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/orbBoardSkipButton"
+        app:layout_constraintEnd_toEndOf="@+id/orbBoardNotifText"
+        app:layout_constraintStart_toStartOf="@+id/orbBoardNotifText" />
+
+    <TextView
+        android:id="@+id/orbBoardSkipButton"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginBottom="5dp"
+        android:fontFamily="@font/inter_bold"
+        android:gravity="center"
+        android:shadowColor="@color/orb_board_white"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="5"
+        android:text="Skip"
+        android:textColor="@color/orb_board_white"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/orbBoardGrandButton"
+        app:layout_constraintStart_toStartOf="@+id/orbBoardGrandButton" />
+
+
+    <TextView
+        android:id="@+id/orbBoardNotifText2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginBottom="6dp"
+        android:fontFamily="@font/inter_bold"
+        android:gravity="center"
+        android:letterSpacing="0"
+        android:shadowColor="@color/black"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="5"
+        android:text="Stay tuned with best offers from our casino"
+        android:textColor="#BEFFFFFF"
+
+        android:textSize="17sp"
+        app:layout_constraintBottom_toTopOf="@+id/orbBoardGrandButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:lineHeight="35dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
